@@ -10,6 +10,7 @@ const NavBar: NextPage = () => {
         </a>
       </Link>
     </header>
+
   )
 }
 

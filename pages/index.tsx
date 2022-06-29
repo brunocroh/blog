@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
-import Link from 'next/link'
 
 import getPosts from '@lib/getPosts'
+import PostPreview from '@components/PostPreview'
 import { Post } from '../types/Post'
 
 interface Props {
@@ -10,19 +10,16 @@ interface Props {
 
 const Blog: NextPage<Props> = ({posts}: Props) => {
   return (
-    <>
-      <h1>Posts</h1>
-      <ul>
+    <div className='min-h-screen min-w-full flex flex-col'>
+      <div className='text-center'>
+        <h1>Posts</h1>
+      </div>
+      <ul className='flex justify-center'>
         {posts.map(({ slug, title }) => (
-          <li key={slug}>
-            <Link href={`/${slug}`}>
-              <a>{title}</a>
-            </Link>
-          </li>
+          <PostPreview key={slug} slug={slug} title={title} />
         ))}
       </ul>
-    </>
-
+    </div>
   )
 }
 
