@@ -3,12 +3,34 @@ import Link from 'next/link'
 
 const NavBar: NextPage = () => {
   return (
-    <header className="py-10 bg-gradient-to-r from-green-400 to-blue-500 text-center">
+    <header className="flex justify-between fixed p-11 top-0 z-20 w-full">
       <Link href="/">
         <a>
-          <h2 className="text-5xl font-bold text-white">Meu blog</h2>
+          <span className="text-[rgba(255,255,255,0.5)]">
+            { "Bruno " }  
+            <strong className='text-white'>Pinheiro</strong>
+          </span>
         </a>
       </Link>
+      <div>
+        <ul className='flex gap-[40px] text-white'>
+          <li>
+            <Link href="/">
+              <a> Home </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog">
+              <a> Blog </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/Threads">
+              <a> Threads </a>
+            </Link>
+          </li>
+        </ul>
+      </div>
     </header>
 
   )
