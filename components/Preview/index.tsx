@@ -1,10 +1,15 @@
 import type { NextPage } from 'next'
 import { ReactNode, useRef } from 'react';
-import { grained } from 'grained';
 import Script from 'next/script'
 
-import NavBar from '@components/NavBar';
+import ContactBar from '@components/ContactBar';
 import FollowBar from '@components/FollowBar';
+import NavBar from '@components/NavBar';
+import Photo from '@components/Photo';
+import Subtitle from '@components/Subtitle';
+
+import useGrained from '../../hooks/useGrained';
+
 
 interface Props {
   children: ReactNode
@@ -12,26 +17,33 @@ interface Props {
 
 const GRAINED_OPTIONS = {
   animate: true,
-  patternWidth: 100,
-  patternHeight: 100,
-  grainOpacity: 0.1,
-  grainDensity: 1,
+  patternWidth: 400,
+  patternHeight: 400,
+  grainOpacity: 0.15,
+  grainDensity: 3,
   grainWidth: 1,
-  grainHeight: 1,
-  grainChaos: 0.5,
-  grainSpeed: 20,
+  grainHeight: 1
 }
 
 const Preview: NextPage = () => {
 
-  const grained_container = useRef();
 
   return (
     <>
-    <div ref={grained_container} className='bg-black w-full h-screen relative'>
-      <NavBar></NavBar>
-      <FollowBar></FollowBar>
+    <div id="container" className='relative flex flex-col justify-center w-full h-screen bg-black align-center'>
+      <NavBar/>
+      <FollowBar/>
+      <div className='flex w-full p-11'>
+        <Photo />
+      </div>
+      <div className='flex self-end p-11 w-full gap-[40px]'>
+        <ContactBar/>
+        <Subtitle/>
+      </div>
     </div>
+    <Script
+      src="/grained.min.js" 
+      onLoad={() => grained && grained("#container", GRAINED_OPTIONS)} />
     </>
   )
 }

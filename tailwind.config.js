@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: '#5be9a8'
+      },
       typography: {
         DEFAULT: {
           css: {

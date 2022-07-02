@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const NavBar: NextPage = () => {
   return (
-    <header className="flex justify-between fixed p-11 top-0 z-20 w-full">
+    <header className="fixed top-0 z-50 flex justify-between w-full p-11">
       <Link href="/">
         <a>
           <span className="text-[rgba(255,255,255,0.5)]">

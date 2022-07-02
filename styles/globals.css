@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+   .clip-me {
+     background-repeat: no-repeat;
+     background-position: center center;
+     clip-path: polygon(24% 8%, 81% 21%, 49% 88%, 0 84%);
+   }
+}
