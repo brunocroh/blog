@@ -5,8 +5,24 @@ import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-ic
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const FollowBar: NextPage = () => {
+
+  const socials = [
+    {
+      href: 'https://github.com/brunocroh',
+      icon: faGithub,
+    },
+    {
+      href: 'https://twitter.com/brunocroh',
+      icon: faTwitter,
+    },
+    {
+      href: 'https://www.linkedin.com/in/brunocroh/',
+      icon: faLinkedin,
+    },
+  ]
+
   return (
-    <aside className='absolute bottom-0 right-0 m-[13px] w-[75px] z-20 flex justify-center pb-11'>
+    <aside className='absolute bottom-0 right-0 m-3 w-[75px] z-20 flex justify-center px-9 pb-7'>
       <div className='flex flex-col justify-center gap-[20px] text-white'>
           <div className='relative h-[24px] w-[70px] origin-center rotate-90 absolute whitespace-nowrape'>
             <span
@@ -15,21 +31,13 @@ const FollowBar: NextPage = () => {
               Follow Me
             </span>
           </div>
-        <div className='flex justify-center'>
-          <Link href=''>
-            <FontAwesomeIcon size='lg' icon={faGithub} />
-          </Link>
-        </div>
-        <div className='flex justify-center'>
-          <Link href=''>
-            <FontAwesomeIcon size='lg' icon={faTwitter} />
-          </Link>
-        </div>
-        <div className='flex justify-center'>
-          <Link href=''>
-            <FontAwesomeIcon size='lg' icon={faLinkedin} />
-          </Link>
-        </div>
+        { socials.map((s) => (
+          <div className='flex justify-center hover:cursor-pointer'>
+            <a target='_blank' href={s.href} >
+              <FontAwesomeIcon size='lg' icon={s.icon} />
+            </a>
+          </div>
+        ))}
       </div>
     </aside>
 

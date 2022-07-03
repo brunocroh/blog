@@ -8,9 +8,6 @@ import NavBar from '@components/NavBar';
 import Photo from '@components/Photo';
 import Subtitle from '@components/Subtitle';
 
-import useGrained from '../../hooks/useGrained';
-
-
 interface Props {
   children: ReactNode
 }
@@ -26,24 +23,23 @@ const GRAINED_OPTIONS = {
 }
 
 const Preview: NextPage = () => {
-
-
   return (
     <>
-    <div id="container" className='relative flex flex-col justify-center w-full h-screen bg-black align-center'>
-      <NavBar/>
-      <FollowBar/>
-      <div className='flex w-full p-11'>
-        <Photo />
+      <div id='grainedContainer' className='relative flex flex-col justify-center justify-between w-full h-screen bg-black'>
+        <NavBar/>
+        <div className='flex items-center w-full grow px-11'>
+          <Photo />
+        </div>
+        <FollowBar/>
+        <div className='flex self-end px-11 pb-9 my-2 w-full gap-[40px]'>
+          <ContactBar/>
+          <Subtitle/>
+        </div>
       </div>
-      <div className='flex self-end p-11 w-full gap-[40px]'>
-        <ContactBar/>
-        <Subtitle/>
-      </div>
-    </div>
-    <Script
-      src="/grained.min.js" 
-      onLoad={() => grained && grained("#container", GRAINED_OPTIONS)} />
+      <Script
+        src="/grained.min.js" 
+        onLoad={() => grained && grained('#grainedContainer', GRAINED_OPTIONS)}
+      />
     </>
   )
 }
