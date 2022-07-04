@@ -9,3 +9,9 @@
      clip-path: polygon(24% 8%, 81% 21%, 49% 88%, 0 84%);
    }
 }
+
+@layer base {
+  html {
+    font-family: Roboto, system-ui, sans-serif;
+  }
+}
