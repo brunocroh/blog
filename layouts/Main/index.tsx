@@ -12,9 +12,8 @@ interface Props {
 const Main: NextPage<Props> = ({ children }: Props) => {
   return (
     <>
-      <Preview></Preview>
       <NavBar></NavBar>
-      <main className="my-6 mx-auto p-6 bg-white sm:shadow-lg rounded prose lg:prose-xl">
+      <main className="p-6 mx-auto my-6 bg-white rounded sm:shadow-lg prose lg:prose-xl">
         { children }
       </main>
     </>

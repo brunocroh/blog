@@ -31,11 +31,9 @@ const NavBar: NextPage = () => {
         <ul className='flex text-sm gap-[40px] text-white'>
           { routes.map((route) => (
             <li>
-              <Link href={route.href}>
-                <a className={currentRoute !== route.href ? 'text-[rgba(255,255,255,0.5)]' : ''}>
-                  {route.text}
-                </a>
-              </Link>
+              <a href={route.href} className={currentRoute !== route.href ? 'text-[rgba(255,255,255,0.5)]' : ''}>
+                {route.text}
+              </a>
             </li>
           )) }
         </ul>
