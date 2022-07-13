@@ -6,9 +6,11 @@ import FollowBar from '@components/FollowBar';
 import Photo from '@components/Photo';
 import Subtitle from '@components/Subtitle';
 
+declare const window: any;
+
 interface Props {
-  name: string
-  description: string
+  name?: string
+  description?: string
 }
 
 const GRAINED_OPTIONS = {
@@ -49,7 +51,11 @@ const Preview: NextPage<Props> = ({ name, description }) => {
       </div>
       <Script
         src="/grained.min.js" 
-        onLoad={() => grained && grained('#grainedContainer', GRAINED_OPTIONS)}
+      onLoad={() => {
+        if(window.grained) {
+          window.grained && window.grained('#grainedContainer', GRAINED_OPTIONS)
+        } 
+      }}
       />
     </>
   )

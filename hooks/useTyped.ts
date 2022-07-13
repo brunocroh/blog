@@ -1,15 +1,24 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, RefObject } from 'react'
 import Typed from 'typed.js'
 
-const useTyped = (el, options) => {
+interface Options {
+  strings: string[]
+  typeSpeed: number
+  backSpeed: number
+  loop: boolean
+}
 
-  const typed = useRef(null)
+const useTyped = (el: RefObject<Element>, options: Options) => {
+
+  const typed = useRef<any>({})
 
   useEffect(() => {
-    typed.current = new Typed(el.current, options);
+    if (el?.current) {
+      typed.current = new Typed(el?.current, options) as any;
+    }
     
     return () => {
-      typed.current.destroy();
+      typed.current?.destroy();
     }
   }, [])
 }

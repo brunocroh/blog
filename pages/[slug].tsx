@@ -16,7 +16,7 @@ interface IParams extends ParsedUrlQuery {
 const Post = ({ title, date, markdown }: Post) => (
   <article>
     <h1>{title}</h1>
-    <time className="font-extralight tracking-wider text-gray-500">{date}</time>
+    <time className="tracking-wider text-gray-500 font-extralight">{date}</time>
     <ReactMarkdown>{markdown}</ReactMarkdown>
   </article>
 );
@@ -30,10 +30,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<Props, IParams> = async (context) => {
-  const { slug } = context.params! 
+export const getStaticProps: any = async (context: any) => {
+  const params = context.params! 
   const posts: Post[] = await getPosts()
-  const post = posts.find((post) => post.slug === slug)
+  const post = posts.find((post) => post.slug === params.slug)
 
   return { props: post }
 };

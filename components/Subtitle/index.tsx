@@ -21,8 +21,8 @@ const options = {
 }
 
 const Subtitle: NextPage = () => {
-  const ref = useRef()
-  const result = useTyped(ref, options)
+  const ref = useRef<HTMLSpanElement>(null)
+  useTyped(ref, options)
 
   return (
     <div className='flex self-end w-[300px] items-end'>
