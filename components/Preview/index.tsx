@@ -1,15 +1,14 @@
 import type { NextPage } from 'next'
-import { ReactNode, useRef } from 'react';
 import Script from 'next/script'
 
 import ContactBar from '@components/ContactBar';
 import FollowBar from '@components/FollowBar';
-import NavBar from '@components/NavBar';
 import Photo from '@components/Photo';
 import Subtitle from '@components/Subtitle';
 
 interface Props {
   name: string
+  description: string
 }
 
 const GRAINED_OPTIONS = {
@@ -22,7 +21,7 @@ const GRAINED_OPTIONS = {
   grainHeight: 1
 }
 
-const Preview: NextPage<Props> = ({ name }) => {
+const Preview: NextPage<Props> = ({ name, description }) => {
   return (
     <>
       <div id='grainedContainer' className='relative flex flex-col justify-center justify-between w-full h-screen bg-black'>
@@ -43,9 +42,7 @@ const Preview: NextPage<Props> = ({ name }) => {
           : (
             <div className='flex flex-col items-center justify-center w-full h-full'>
               <h1 className='text-white text-9xl'>{name}</h1>
-              <div className='flex self-end'>
-                <span className='text-white'> click here </span>
-              </div>
+              <h2 className='text-xl text-white'>{description}</h2>
             </div>
           )
         }
