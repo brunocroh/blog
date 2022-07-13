@@ -25,7 +25,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           property="og:title"
         content="Bruno Pinheiro Website and blog"
         />
-        <meta name="twitter:card" content="Hello, I’m Bruno Pinheiro!" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Hello, I’m Bruno Pinheiro!" />
+        <meta name="twitter:description" content="Hello, I’m Bruno Pinheiro, Fullstack and Blockchain Developer based in Goiânia, Brazil." />
+        <meta name="twitter:site" content="@brunocroh" />
         <meta
           property="og:description"
           content="Hello, I’m Bruno Pinheiro, Fullstack and Blockchain Developer based in Goiânia, Brazil."
