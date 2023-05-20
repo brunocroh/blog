@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import Script from 'next/script'
+import Script from "next/script";
 
-declare const window: any
+declare const window: any;
 
 const GRAINED_OPTIONS = {
   animate: true,
@@ -12,7 +12,7 @@ const GRAINED_OPTIONS = {
   grainDensity: 3,
   grainWidth: 2,
   grainHeight: 1,
-}
+};
 
 const Grained = () => {
   return (
@@ -20,11 +20,12 @@ const Grained = () => {
       src="/grained.min.js"
       onLoad={() => {
         if (window.grained) {
-          window.grained && window.grained(`#grainedContainer`, GRAINED_OPTIONS)
+          window.grained &&
+            window.grained(`#grainedContainer`, GRAINED_OPTIONS);
         }
       }}
     />
-  )
-}
+  );
+};
 
-export default Grained
+export default Grained;

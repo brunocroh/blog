@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 
 const MiniBio: NextPage = () => {
-  const textClass = "text-white mb-5 text-5xl";
   return (
     <div className="flex flex-col self-center grow w-[800px] h-full pb-[50px] mb-[30px]">
       <span className="text-white mb-5 text-5xl">Hello!</span>
