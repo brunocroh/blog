@@ -1,3 +1,5 @@
+'use client';
+
 import { useRef } from 'react'
 import type { NextPage } from 'next'
 import useTyped from '../../hooks/useTyped'

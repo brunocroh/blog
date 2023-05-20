@@ -1,10 +1,13 @@
+'use client'
+
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 
 const NavBar: NextPage = () => {
-  const router = useRouter()
-  const currentRoute = router.pathname
+
+  const currentRoute = usePathname()
+
 
   const routes = [
     {
@@ -30,7 +33,7 @@ const NavBar: NextPage = () => {
       <div>
         <ul className='flex text-sm gap-[40px] text-white'>
           { routes.map((route) => (
-            <li>
+            <li key={route.text}>
               <a href={route.href} className={currentRoute !== route.href ? 'text-[rgba(255,255,255,0.5)]' : ''}>
                 {route.text}
               </a>

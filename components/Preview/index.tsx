@@ -1,3 +1,5 @@
+'use client'
+
 import type { NextPage } from 'next'
 import Script from 'next/script'
 
@@ -51,11 +53,11 @@ const Preview: NextPage<Props> = ({ name, description }) => {
       </div>
       <Script
         src="/grained.min.js" 
-      onLoad={() => {
-        if(window.grained) {
-          window.grained && window.grained('#grainedContainer', GRAINED_OPTIONS)
-        } 
-      }}
+        onLoad={() => {
+          if(window.grained) {
+            window.grained && window.grained('#grainedContainer', GRAINED_OPTIONS)
+          } 
+        }}
       />
     </>
   )
