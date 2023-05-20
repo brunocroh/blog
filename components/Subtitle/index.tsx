@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useRef } from 'react'
-import type { NextPage } from 'next'
-import useTyped from '../../hooks/useTyped'
+import { useRef } from "react";
+import type { NextPage } from "next";
+import useTyped from "../../hooks/useTyped";
 
-const COLOR = '#5be9a8'
+const COLOR = "#5be9a8";
 
 const options = {
   strings: [
@@ -20,19 +20,22 @@ const options = {
   typeSpeed: 30,
   backSpeed: 30,
   loop: true,
-}
+};
 
 const Subtitle: NextPage = () => {
-  const ref = useRef<HTMLSpanElement>(null)
-  useTyped(ref, options)
+  const ref = useRef<HTMLSpanElement>(null);
+  useTyped(ref, options);
 
   return (
-    <div className='flex self-end w-[300px] items-end'>
-      <div >
-        <span className='text-6xl text-white whitespace-nowrap' ref={ref}></span>
+    <div className="hidden self-end items-end md:flex">
+      <div>
+        <span
+          className="text-6xl text-white whitespace-nowrap"
+          ref={ref}
+        ></span>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Subtitle
+export default Subtitle;

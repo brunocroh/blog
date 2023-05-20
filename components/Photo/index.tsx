@@ -1,14 +1,14 @@
-import type { NextPage } from 'next'
+import type { NextPage } from "next";
 
-import MiniBio from '../MiniBio'
+import MiniBio from "../MiniBio";
 
 const Photo: NextPage = () => {
   return (
-    <div className="flex w-full ml-[50px] mt-[50px] items-end">
-      <img className="clip-me w-[400px]" src="/me.jpeg" alt="" />
+    <div className="flex flex-col sm:flex-row w-full min-w-[600px]">
+      <img className="clip-me w-[600px]" src="/me.jpeg" alt="" />
       <MiniBio />
     </div>
-  )
-}
+  );
+};
 
-export default Photo
+export default Photo;

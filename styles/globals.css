@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 @layer utilities {
-   .clip-me {
-     background-repeat: no-repeat;
-     background-position: center center;
-     clip-path: polygon(24% 8%, 81% 21%, 49% 88%, 0 84%);
-   }
+  .clip-me {
+    background-repeat: no-repeat;
+    background-position: center center;
+    clip-path: polygon(26% 6%, 81% 17%, 78% 95%, 0 79%);
+  }
 }
 
 @layer base {

@@ -1,29 +1,29 @@
-'use client'
+"use client";
 
-import type { NextPage } from 'next'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import type { NextPage } from "next";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NavBar: NextPage = () => {
-  const currentRoute = usePathname()
+  const currentRoute = usePathname();
 
   const routes = [
     {
-      text: 'Home',
-      href: '/',
+      text: "Home",
+      href: "/",
     },
     {
-      text: 'Blog',
-      href: '/blog',
+      text: "Blog",
+      href: "/blog",
     },
-  ]
+  ];
 
   return (
-    <header className="fixed top-0 z-50 flex justify-between container mx-xl p-11">
+    <header className="fixed top-0 z-50 flex justify-between container mx-xl min-w-[500px] p-11">
       <Link href="/">
         <a>
           <span className="text-[rgba(255,255,255,0.5)] text-sm">
-            {'Bruno '}
+            {"Bruno "}
             <strong className="text-white">Pinheiro</strong>
           </span>
         </a>
@@ -36,8 +36,8 @@ const NavBar: NextPage = () => {
                 href={route.href}
                 className={
                   currentRoute !== route.href
-                    ? 'text-[rgba(255,255,255,0.5)]'
-                    : ''
+                    ? "text-[rgba(255,255,255,0.5)]"
+                    : ""
                 }
               >
                 {route.text}
@@ -47,7 +47,7 @@ const NavBar: NextPage = () => {
         </ul>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;
