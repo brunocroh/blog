@@ -12,7 +12,7 @@ const FollowBar: NextPage = () => {
       icon: faGithub,
     },
     {
-      href: 'https://twitter.com/brunocroh',
+      href: 'https://twitter.com/brunocroh?ref_src=twsrc%5Etfw',
       icon: faTwitter,
     },
     {
@@ -33,7 +33,7 @@ const FollowBar: NextPage = () => {
           </div>
         { socials.map((s) => (
           <div className='flex justify-center hover:cursor-pointer'>
-            <a target='_blank' href={s.href} >
+            <a target='_blank' href={s.href} rel="noreferrer" >
               <FontAwesomeIcon size='lg' icon={s.icon} />
             </a>
           </div>

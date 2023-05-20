@@ -1,13 +1,10 @@
 'use Client'
 
-import type { NextPage } from 'next'
-
-import Preview from '@components/Preview'
-
-const Blog: NextPage = () => {
+const Blog = () => {
   return (
     <>
-      <Preview name='Blog' description='coming soon'/>
+      <h1>Blog</h1>
+      <h2>coming soon</h2>
     </>
   )
 }
