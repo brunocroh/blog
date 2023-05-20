@@ -44,9 +44,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
         <meta property="og:image" content="https://brunocroh.com/me.jpeg" />
       </Head>
-      <body className="bg-blacK">
+      <body className="bg-black">
         <div className="container mx-xl centered">
-          <tNavBar />
+          <NavBar />
           <main>{children}</main>
         </div>
       </body>
