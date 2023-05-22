@@ -1,11 +1,10 @@
-"use client";
-
 import type { NextPage } from "next";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { headers } from "next/headers";
 
 const NavBar: NextPage = () => {
-  const currentRoute = usePathname();
+  const headersList = headers();
+  const currentRoute = headersList.get("x-invoke-path");
 
   const routes = [
     {
@@ -29,14 +28,14 @@ const NavBar: NextPage = () => {
         </a>
       </Link>
       <div>
-        <ul className="hidden md:flex text-xl gap-[40px] text-white font-bold">
+        <ul className="hidden md:flex text-xl gap-[40px] text-[rgba(255,255,255,0.5)] font-bold decoration">
           {routes.map((route) => (
             <li key={route.text}>
               <a
                 href={route.href}
                 className={
-                  currentRoute !== route.href
-                    ? "text-[rgba(255,255,255,0.5)]"
+                  currentRoute === route.href
+                    ? "text-white underline underline-offset-4"
                     : ""
                 }
               >
