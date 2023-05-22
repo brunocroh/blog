@@ -4,7 +4,6 @@ import { ReactNode } from "react";
 
 import "tailwindcss/tailwind.css";
 import "../styles/globals.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Grained from "@/components/Grained";
 
@@ -27,7 +26,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta property="og:url" content="https://brunocroh.com" />
         <meta
           property="og:type"
-          content="Hello, I’m Bruno Pinheiro, Fullstack and Blockchain Developer based in Goiânia, Brazil."
+          content="Hello, I’m Bruno Pinheiro, Fullstack Developer based in Brazil."
         />
         <meta property="fb:app_id" content="" />
         <meta property="og:title" content="Bruno Pinheiro Website and blog" />
@@ -35,19 +34,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="twitter:title" content="Hello, I’m Bruno Pinheiro!" />
         <meta
           name="twitter:description"
-          content="Hello, I’m Bruno Pinheiro, Fullstack and Blockchain Developer based in Goiânia, Brazil."
+          content="Hello, I’m Bruno Pinheiro, Fullstack Developer based in Brazil."
         />
         <meta name="twitter:site" content="@brunocroh" />
         <meta
           property="og:description"
-          content="Hello, I’m Bruno Pinheiro, Fullstack and Blockchain Developer based in Goiânia, Brazil."
+          content="Hello, I’m Bruno Pinheiro, Fullstack Developer based in Brazil."
         />
         <meta property="og:image" content="https://brunocroh.com/me.jpeg" />
       </Head>
       <body className="bg-black">
-        <div className="container mx-xl min-w-[500px] centered">
+        <div className="flex flex-col container mx-xl h-screen p-11">
           <NavBar />
-          <main>{children}</main>
+          <main className="flex-auto">{children}</main>
         </div>
       </body>
     </html>

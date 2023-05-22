@@ -5,12 +5,12 @@ import Subtitle from "@/components/Subtitle";
 
 const Blog = () => {
   return (
-    <div className="flex flex-col justify-center w-full h-screen bg-black relative">
-      <div className="flex items-center justify-center w-1/2 grow px-11">
+    <div className="flex h-full flex-col flex-wrap bg-black relative justify-center">
+      <div className="flex flex-auto flex-col sm:flex-row w-full justify-center">
         <Photo />
       </div>
       <FollowBar />
-      <div className="self-end px-11 pb-9 my-2 w-full gap-[40px] flex">
+      <div className="relative w-full hidden md:flex">
         <ContactBar />
         <Subtitle />
       </div>

@@ -4,10 +4,14 @@ import MiniBio from "../MiniBio";
 
 const Photo: NextPage = () => {
   return (
-    <div className="flex flex-col sm:flex-row w-full min-w-[600px]">
-      <img className="clip-me w-[600px]" src="/me.jpeg" alt="" />
+    <>
+      <img
+        className="clip-me sm:w-[400px] sm:[400px] lg:w-[700px] lg:h-[900px] self-center"
+        src="/me.jpeg"
+        alt=""
+      />
       <MiniBio />
-    </div>
+    </>
   );
 };
 

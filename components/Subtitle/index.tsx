@@ -27,13 +27,8 @@ const Subtitle: NextPage = () => {
   useTyped(ref, options);
 
   return (
-    <div className="hidden self-end items-end md:flex">
-      <div>
-        <span
-          className="text-6xl text-white whitespace-nowrap"
-          ref={ref}
-        ></span>
-      </div>
+    <div>
+      <span className="text-6xl text-white whitespace-nowrap" ref={ref}></span>
     </div>
   );
 };
