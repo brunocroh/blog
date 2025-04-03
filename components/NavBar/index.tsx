@@ -23,7 +23,7 @@ const NavBar: NextPage = () => {
         <a>
           <span className="text-primary font-bold text-xl">
             {"Bruno "}
-            <span className="text-[rgba(255,255,255,0.5)]">Pinheiro</span>
+            <span className="text-[rgba(255,255,255,0.5)]">Rodrigues</span>
           </span>
         </a>
       </Link>
