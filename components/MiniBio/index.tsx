@@ -9,7 +9,7 @@ const MiniBio: NextPage = () => {
           I’m <span className="text-primary"> Bruno Rodrigues</span>.
         </span>
         <span className="text-white text-5xl">
-          Fullstack Developer based in Brazil.
+          Fullstack Developer based in the UK.
         </span>
       </div>
     </div>
