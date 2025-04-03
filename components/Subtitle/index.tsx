@@ -27,8 +27,8 @@ const Subtitle: NextPage = () => {
   useTyped(ref, options);
 
   return (
-    <div>
-      <span className="text-6xl text-white whitespace-nowrap" ref={ref}></span>
+    <div className="flex align-baseline">
+      <span className="text-xl text-white whitespace-nowrap" ref={ref}></span>
     </div>
   );
 };
