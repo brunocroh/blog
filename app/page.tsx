@@ -1,6 +1,5 @@
 import FollowBar from "@/components/FollowBar";
 import ContactBar from "@/components/ContactBar";
-import Subtitle from "@/components/Subtitle";
 import MiniBio from "@/components/MiniBio";
 
 const Blog = () => {
