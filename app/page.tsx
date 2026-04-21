@@ -12,7 +12,6 @@ const Blog = () => {
       <FollowBar />
       <div className="relative w-full hidden md:flex">
         <ContactBar />
-        <Subtitle />
       </div>
     </div>
   );

@@ -7,14 +7,14 @@ const NavBar: NextPage = () => {
   const currentRoute = headersList.get("x-invoke-path");
 
   const routes = [
-    {
-      text: "Home",
-      href: "/",
-    },
-    {
-      text: "Blog",
-      href: "/blog",
-    },
+    // {
+    //   text: "Home",
+    //   href: "/",
+    // },
+    // {
+    //   text: "Blog",
+    //   href: "/blog",
+    // },
   ];
 
   return (
